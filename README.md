@@ -1,3 +1,5 @@
+# anypoint-styles
+
 The `<anypoint-styles>` component provides simple ways to use Anypoint CSS styles
 in an application. The following imports are available:
 
@@ -9,3 +11,4 @@ Anypoint [font](http://ux.mulesoft.com/#/typography) styles and sizes
 
 We recommend importing each of these individual files, and using the style mixins
 available in each ones, rather than the aggregated `anypoint-styles.html` as a whole.
+
