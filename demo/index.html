@@ -20,8 +20,12 @@ the License.
   <title>anypoint-styles demo</title>
   <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
   <link rel="import" href="../../../bower_components/iron-flex-layout/iron-flex-layout.html">
+  <link rel="import" href="../../../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+  <link rel="import" href="../../../bower_components/paper-listbox/paper-listbox.html">
+  <link rel="import" href="../../../bower_components/paper-item/paper-item.html">
   <link rel="import" href="../colors.html">
   <link rel="import" href="../typography.html">
+  <link rel="import" href="../dropdown-menu.html">
 </head>
 <style>
 html {
@@ -31,6 +35,7 @@ html {
 body {
   font-size: 14px;
   max-width: 900px;
+  padding-bottom: 120px;
 }
 
 .redlines {
@@ -42,6 +47,7 @@ body {
   margin: 20px 0;
 }
 </style>
+<style is="custom-style" include="anypoint-dropdown-menu-styles"></style>
 <style is="custom-style">
 .anypoint-font-header1 {
   @apply(--anypoint-font-header1);
@@ -329,6 +335,17 @@ body {
         </span>
       </div>
     </template>
+  </section>
+
+  <section id="dropdown">
+    <h2 class="anypoint-font-header2">dropdown-menu.html</h2>
+    <paper-dropdown-menu class="anypoint-dropdown-menu">
+      <paper-listbox class="dropdown-content" selected="0">
+        <paper-item>Option 1</paper-item>
+        <paper-item>Option 2</paper-item>
+        <paper-item>Option 3</paper-item>
+      </paper-listbox>
+    </paper-dropdown-menu>
   </section>
   <script>
   var names = [{
