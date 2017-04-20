@@ -1,3 +1,18 @@
+<a name="0.1.5"></a>
+## [0.1.5](https://github.com/advanced-rest-client/anypoint-styles/compare/0.1.2...v0.1.5) (2017-04-20)
+
+
+### Docs
+
+* Updated documentation for the dropdown-menu ([348a9d3317339bcddc63eacb3f70ba53f025e309](https://github.com/advanced-rest-client/anypoint-styles/commit/348a9d3317339bcddc63eacb3f70ba53f025e309))
+
+### Update
+
+* Added documentation for elements, added new element to style dropdown menu ([ffd9e763beb55c088e8a69cc872ce3ef94ac5aeb](https://github.com/advanced-rest-client/anypoint-styles/commit/ffd9e763beb55c088e8a69cc872ce3ef94ac5aeb))
+* Updated dropdown styles ([464a4034124b2ea33bf49f3b8ef91647e5f505dd](https://github.com/advanced-rest-client/anypoint-styles/commit/464a4034124b2ea33bf49f3b8ef91647e5f505dd))
+
+
+
 <a name="0.1.4"></a>
 ## [0.1.4](https://github.com/advanced-rest-client/anypoint-styles/compare/0.1.3...v0.1.4) (2017-04-20)
 
