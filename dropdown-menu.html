@@ -43,16 +43,20 @@ And finally add `anypoint-dropdown-menu` class name to the `paper-dropdown-menu`
   <template>
     <style>
     .anypoint-dropdown-menu {
+      padding: 0 12px;
+      border-left: 2px var(--anypoint-color-aluminum4) solid;
+      border-right: 2px var(--anypoint-color-aluminum4) solid;
+
       --paper-dropdown-menu-ripple: {
         color: transparent;
       };
 
       --paper-input-container-underline: {
-        border-bottom-color: transparent;
+        border-color: transparent;
       };
 
       --paper-input-container-underline-focus: {
-        border-bottom-color: transparent;
+        border-color: transparent !important;
       };
 
       --paper-input-container-underline-disabled: {
@@ -64,6 +68,10 @@ And finally add `anypoint-dropdown-menu` class name to the `paper-dropdown-menu`
         position: absolute !important;
         box-shadow: none;
       };
+    }
+
+    .anypoint-dropdown-menu[invalid] {
+      border-color: var(--anypoint-color-danger);
     }
 
     .anypoint-dropdown-menu .dropdown-content {
