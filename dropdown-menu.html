@@ -11,7 +11,7 @@ WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 License for the specific language governing permissions and limitations under
 the License.
 -->
-<!-- <link rel="import" href="../polymer/polymer.html"> -->
+<link rel="import" href="colors.html">
 <!--
 This styles are meant to be included into elements that uses `paper-dropdown-menu` to style it
 to Anypoint's dropdown menu component.
@@ -75,7 +75,7 @@ And finally add `anypoint-dropdown-menu` class name to the `paper-dropdown-menu`
     }
 
     .anypoint-dropdown-menu .dropdown-content {
-      border: 2px solid #cacbcc;
+      border: 2px solid var(--anypoint-dropdown-menu-border-color, --anypoint-color-aluminum4);;
     }
     </style>
   </template>
