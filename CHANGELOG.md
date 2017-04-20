@@ -1,3 +1,13 @@
+<a name="0.1.6"></a>
+## [0.1.6](https://github.com/advanced-rest-client/anypoint-styles/compare/0.1.5...v0.1.6) (2017-04-20)
+
+
+### Upsate
+
+* Replaced color value with variable ([48e192f8bc58b31c6cbced460f19f92c8f73f14e](https://github.com/advanced-rest-client/anypoint-styles/commit/48e192f8bc58b31c6cbced460f19f92c8f73f14e))
+
+
+
 <a name="0.1.5"></a>
 ## [0.1.5](https://github.com/advanced-rest-client/anypoint-styles/compare/0.1.2...v0.1.5) (2017-04-20)
 

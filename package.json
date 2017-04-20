@@ -1,7 +1,7 @@
 {
   "name": "anypoint-styles",
   "description": "Element that displays response documentation for RAML",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "license": "Apache-2.0 OR CC-BY-4.0",
   "devDependencies": {
     "conventional-github-releaser": "^1.1.1",
