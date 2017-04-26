@@ -1,3 +1,18 @@
+<a name="0.1.8"></a>
+## [0.1.8](https://github.com/advanced-rest-client/anypoint-styles/compare/0.1.4...v0.1.8) (2017-04-26)
+
+
+### Update
+
+* Added default theme for the anypoint ([d0dae6fbdbcccaaf94d60058814c5079fffd53a0](https://github.com/advanced-rest-client/anypoint-styles/commit/d0dae6fbdbcccaaf94d60058814c5079fffd53a0))
+* Updated dropdown styles ([464a4034124b2ea33bf49f3b8ef91647e5f505dd](https://github.com/advanced-rest-client/anypoint-styles/commit/464a4034124b2ea33bf49f3b8ef91647e5f505dd))
+
+### Upsate
+
+* Replaced color value with variable ([48e192f8bc58b31c6cbced460f19f92c8f73f14e](https://github.com/advanced-rest-client/anypoint-styles/commit/48e192f8bc58b31c6cbced460f19f92c8f73f14e))
+
+
+
 <a name="0.1.7"></a>
 ## [0.1.7](https://github.com/advanced-rest-client/anypoint-styles/compare/0.1.6...v0.1.7) (2017-04-20)
 
