@@ -47,6 +47,7 @@ And finally add `anypoint-dropdown-menu` class name to the `paper-dropdown-menu`
       border-left: 2px var(--anypoint-color-aluminum4) solid;
       border-right: 2px var(--anypoint-color-aluminum4) solid;
       background-color: var(--anypoint-color-tertiary);
+      @apply(--anypoint-dropdown-menu);
 
       --paper-dropdown-menu-ripple: {
         color: transparent;
@@ -76,7 +77,7 @@ And finally add `anypoint-dropdown-menu` class name to the `paper-dropdown-menu`
     }
 
     .anypoint-dropdown-menu .dropdown-content {
-      border: 2px solid var(--anypoint-dropdown-menu-border-color, --anypoint-color-aluminum4);;
+      border: 2px solid var(--anypoint-dropdown-menu-border-color, --anypoint-color-aluminum4);
     }
     </style>
   </template>
