@@ -1,5 +1,5 @@
 {
-  "name": "anypoint-styles",
+  "name": "@anypoint-components/anypoint-styles",
   "description": "Anypoint styles definition for API components.",
   "version": "2.0.0-preview",
   "license": "(C) MuleSoft. All rights reserved.",
