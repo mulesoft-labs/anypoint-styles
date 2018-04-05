@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0",
-    "iron-component-page": "^3.0.1"
+    "iron-component-page": "PolymerElements/iron-component-page#^3.0.1"
   },
   "ignore": [
     "**/.*",
