@@ -182,6 +182,14 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
     --auth-button-hover: {
       @apply --btn-danger-nofill-hover;
     };
+    /* Try it forms enable checkbox margin top */
+    --api-url-params-form-enable-checkbox-margin-top: 15px;
+    --api-headers-form-enable-checkbox-margin-top: 15px;
+    /* Try it forms hint icon margin top */
+    --api-url-params-form-hint-icon-margin-top: 5px;
+    --api-headers-editore-hint-icon-margin-top: 5px;
+    /* Try it forms delete icon margin top */
+    --api-headers-form-delete-icon-margin-top: 5px;
 
     /* THEME FOR PAPER ELEMENTS */
 
@@ -236,6 +244,10 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
     /* Removes ink from paper button */
     --paper-button-ink-color: transparent;
     --paper-icon-button-ink-color: transparent;
+    /* A special case for paper input when it is contructed with Anypoint paper-input and using regular input with paper-input container */
+    --paper-input-container-input-input-style: {
+      padding: 0 10px;
+    };
   }
   </style>
 </custom-style>
