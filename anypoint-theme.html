@@ -190,6 +190,9 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
     --api-headers-editore-hint-icon-margin-top: 5px;
     /* Try it forms delete icon margin top */
     --api-headers-form-delete-icon-margin-top: 5px;
+    --api-url-params-editor-editor-subheader: {
+      @apply --arc-font-subhead;
+    };
 
     /* THEME FOR PAPER ELEMENTS */
 
@@ -204,7 +207,7 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
       color:  var(--primary-color);
     };
     /* Paper tabs styling */
-    --paper-tabs-selection-bar-color: var(--primary-color);
+    --paper-tabs-selection-bar-color: var(--anypoint-color-primary);
     --paper-tab-ink: var(--primary-color);
     /* Paper tabs container */
     --paper-tabs-content: {
@@ -247,6 +250,22 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
     /* A special case for paper input when it is contructed with Anypoint paper-input and using regular input with paper-input container */
     --paper-input-container-input-input-style: {
       padding: 0 10px;
+    };
+    /* Paper item element: this is very dirty hack to style paper-dropdown-menu. Part of styling is in the element and the rest is here. */
+    --paper-item: {
+      padding: 0px 10px;
+      border-left: 2px transparent solid;
+      border-right: 2px transparent solid;
+      cursor: pointer;
+      border-left: 2px solid var(--anypoint-color-aluminum4);
+      border-right: 2px solid var(--anypoint-color-aluminum4);
+    };
+    /* There is no such definition in `paper-item` but API components may use it */
+    --paper-item-hover: {
+      padding: 0px 10px;
+      color: var(--anypoint-color-coreBlue3);
+      border-left: 2px var(--anypoint-color-coreBlue3) solid;
+      border-right: 2px var(--anypoint-color-coreBlue3) solid;
     };
   }
   </style>
