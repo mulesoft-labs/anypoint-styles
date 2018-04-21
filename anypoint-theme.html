@@ -35,6 +35,7 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
     --arc-font-display1: {
       @apply --arc-font-common-base;
 
+      font-weight: 100;
       font-size: 34px;
       line-height: 40px;
     };
@@ -215,6 +216,32 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
     --method-display-post-color: var(--anypoint-color-violet3);
     --method-display-put-color: var(--anypoint-color-navy3);
 
+    /* HTTP methods colors in method documentation panel */
+    --method-label-get-background-color: var(--anypoint-color-futureGreen5);
+    --method-label-get-color: #fff;
+    --method-label-post-background-color: var(--anypoint-color-violet3);
+    --method-label-post-color: #fff;
+    --method-label-put-background-color: var(--anypoint-color-navy3);
+    --method-label-put-color: #fff;
+    --method-label-patch-background-color: rgb(156, 39, 176);
+    --method-label-patch-color: #fff;
+    --method-label-delete-background-color: rgb(244, 67, 54);
+    --method-label-delete-color: #fff;
+
+    /* Code snippets colors */
+    --http-code-snippet-container-highlighted: {
+      background-color: #f5f5f5;
+    };
+    --http-code-snippet-line: {
+      word-break: break-all;
+      white-space: pre-wrap;
+    };
+    --http-code-snippet-container: {
+      background-color: #e0e0e0;
+      padding: 8px;
+    };
+
+
     /* Type documentation page */
     --api-type-document-type-background-color: var(--anypoint-color-primary);
     --api-body-document-media-button-background-color: var(--anypoint-color-futureGreen1);
@@ -222,6 +249,22 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
 
     /* Method (operation) styles  */
     --api-method-documentation-title-method-font-weight: 700;
+    --api-method-documentation-try-it-background-color-hover: var(--anypoint-color-coreBlue2);
+
+    /* Request editor */
+    --api-request-editor-send-valid-button: {
+      background-color: var(--anypoint-color-primary);
+    };
+    --api-request-editor-send-valid-button-hover: {
+      background-color: var(--anypoint-color-coreBlue2);
+    };
+    --api-request-editor-send-invalid-button: {
+      background-color: var(--anypoint-color-danger);
+    };
+    --api-request-editor-send-invalid-button-hover: {
+      background-color: #ef5770;
+    };
+    --primary-button-disabled-background-color: rgb(234, 234, 234);
 
     /* THEME FOR PAPER ELEMENTS */
 
@@ -239,7 +282,7 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
     /* Bottomm selection bar in tabs */
     --paper-tabs-selection-bar: {
       border-width: 3px;
-      border-color: var(--primary-color);
+      /* border-color: var(--primary-color); */
     };
     /* Paper tab content text */
     --paper-tab-content: {
