@@ -1,416 +1,349 @@
 <!--
 @license
-Copyright 2016 The Advanced REST client authors <arc@mulesoft.com>
-Licensed under the Apache License, Version 2.0 (the "License"); you may not
-use this file except in compliance with the License. You may obtain a copy of
-the License at
-http://www.apache.org/licenses/LICENSE-2.0
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
-WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
-License for the specific language governing permissions and limitations under
-the License.
+Copyright 2018 MuleSoft.
+All rights reserverd.
 -->
-<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../polymer/lib/elements/custom-style.html">
 <link rel="import" href="typography.html">
 <link rel="import" href="colors.html">
 <!--
 The API Console main stylesheet.
 It is a Polymer's custom style element. It will propagate variables and mixins on all elements;
 -->
-<style is="custom-style">
+<custom-style>
+  <style is="custom-style">
+  :root {
+    /* Commonly used properties in Polymer elements */
+    --primary-color: var(--anypoint-color-primary);
+    --secondary-color: var(--anypoint-color-secondary);
+    --primary-background-color: var(--anypoint-color-tertiary);
+    --accent-color: var(--anypoint-color-violet3);
 
-:root {
-  --primary-color: var(--anypoint-color-primary, #00a2df);
-  --secondary-color: var(--anypoint-color-secondary, #506773);
-  --primary-background-color: #fff;
-  --accent-color: var(--anypoint-color-violet3, #cc143c);
+    /* API components fonts definition. Basically copies Anypoint typography into ARC prefix. */
+    --arc-font-common-base: {
+      @apply --anypoint-font-common-base;
+    };
 
-  /* THEME */
-  --arc-font-common-base: {
-    @apply(--anypoint-font-common-base);
-  };
+    --arc-font-common-code: {
+      @apply --anypoint-font-common-code;
+    };
 
-  --arc-font-common-code: {
-    @apply(--anypoint-font-common-code);
-  };
+    --arc-font-common-nowrap: {
+      @apply --anypoint-font-common-nowrap;
+    };
 
-  --arc-font-common-nowrap: {
-    @apply(--anypoint-font-common-nowrap);
-  };
+    --arc-font-display1: {
+      @apply --arc-font-common-base;
 
-  --arc-font-display1: {
-    @apply(--arc-font-common-base);
+      font-weight: 100;
+      font-size: 34px;
+      line-height: 40px;
+    };
 
-    font-size: 34px;
-    line-height: 40px;
-  };
+    --arc-font-headline: {
+      @apply --arc-font-common-base;
 
-  --arc-font-headline: {
-    @apply(--arc-font-common-base);
+      font-weight: 100;
+      letter-spacing: -.03em;
+      font-size: 24px;
+      line-height: 32px;
+    };
 
-    font-weight: 100;
-    letter-spacing: -.03em;
-    font-size: 24px;
-    line-height: 32px;
-  };
+    --arc-font-title: {
+      @apply --arc-font-common-base;
+      @apply --arc-font-common-nowrap;
 
-  --arc-font-title: {
-    @apply(--arc-font-common-base);
-    @apply(--arc-font-common-nowrap);
+      font-weight: 100;
+      letter-spacing: -.02em;
+      font-size: 20px;
+      line-height: 28px;
+    };
 
-    font-weight: 100;
-    letter-spacing: -.02em;
-    font-size: 20px;
-    line-height: 28px;
-  };
+    --arc-font-subhead: {
+      @apply --arc-font-common-base;
 
-  --arc-font-subhead: {
-    @apply(--arc-font-common-base);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+    };
 
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-  };
+    --arc-font-body2: {
+      @apply --anypoint-font-body;
+      font-weight: 500;
+      font-size: 14px;
+    };
 
-  --arc-font-body2: {
-    @apply(--anypoint-font-body);
-    font-weight: 500;
-    font-size: 14px;
-  };
+    --arc-font-body1: {
+      @apply --anypoint-font-body;
+      font-size: 14px;
+    };
 
-  --arc-font-body1: {
-    @apply(--anypoint-font-body);
-    font-size: 14px;
-  };
+    --arc-font-caption: {
+      @apply --arc-font-common-base;
+      @apply --arc-font-common-nowrap;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.011em;
+      line-height: 20px;
+    };
 
-  --arc-font-caption: {
-    @apply(--arc-font-common-base);
-    @apply(--arc-font-common-nowrap);
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 0.011em;
-    line-height: 20px;
-  };
+    --select-text: {
+      @apply --arc-font-common-base;
+      -webkit-user-select: text;
+      cursor: text;
+    };
 
-  --select-text: {
-    @apply(--arc-font-common-base);
-    -webkit-user-select: text;
-    cursor: text;
-  };
+    --arc-link: {
+      @apply --arc-font-common-base;
+      color: #00A1DF;
+    };
 
-  --arc-link: {
-    @apply(--arc-font-common-base);
-    color: #00A1DF;
-  };
+    --arc-font-code1: {
+      @apply --anypoint-font-code;
+      font-size: 14px;
+    };
 
-  --arc-font-code1: {
-    @apply(--anypoint-font-code);
-    font-size: 14px;
-  }
+    /* THEME FOR API COMPONENTS */
 
-  /* Mixin applied to all the "missing info" paragraphs. By deafult all elements this kind are the <p> elements. But it may vary. */
-  --no-info-message: {
-    @apply(--arc-font-body1);
-    font-style: italic;
-  }
-
-    /*Mixin applied to `paper-icon-buttons`.*/
-  --icon-button: {
-    color: rgba(0, 0, 0, 0.54) !important;
-    background-color: transparent  !important;
-    transition: color 0.35s linear;
-  }
-  --icon-button-hover: {
-    color:  var(--primary-color) !important;
-  }
+    /* Mixin applied to all the "missing info" paragraphs. By deafult all elements this kind are the <p> elements. But it may vary. */
+    --no-info-message: {
+      @apply --arc-font-body1;
+      font-style: italic;
+    };
     /* Mixin applied to all labels that are form elements */
-  --form-label: {
-    font-weight: 500;
-  }
-
-  --input-line-color:  var(--primary-color);
+    --form-label: {
+      font-weight: 500;
+    };
 
     /* Mixin applied to all code blocks that highlights schemas / types / etc. All code block uses the `prism-theme-default`. */
-  --code-block: {
-    @apply(--arc-font-common-code);
-  };
+    --code-block: {
+      @apply --arc-font-common-code;
+    };
+    /* Code Mirror and code related components */
+    --arc-code-mirror-background-color: #f5f2f0;
+    --code-mirror-editor: {
+      background-color: var(--arc-code-mirror-background-color);
+      z-index: 0;
+      display: block;
+    };
+    --code-mirror-wrapper: {
+      display: block;
+      height: 100%;
+    };
+    --code-mirror-string-color: #1341a9;
+    --code-mirror-number-color: #03a9f4;
+    --code-mirror-atom-color: #0288d1;
+    --code-mirror-punctuation-color: #757575;
+    --code-type-text-value-color: var(--code-mirror-string-color);
+    --code-type-number-value-color: var(--code-mirror-number-color);
+    --code-type-boolean-value-color: var(--code-mirror-atom-color);
+    --code-type-null-value-color: var(--code-mirror-atom-color);
+    --code-punctuation-value-color: var(--code-mirror-punctuation-color);
+    --code-type-link-color: #757575;
+    --code-array-index-color: rgba(1, 87, 155, 0.57);
+    --code-background-color: var(--anypoint-color-aluminum2);
+    /* API navigation element */
+    --api-navigation-list-item-color: #616161;
+    --api-navigation-list-item-selected-background-color: transparent;
+    --api-navigation-list-item-selected-color: var(--api-navigation-list-item-color);
+    --api-navigation-list-item: {
+      border-left: 4px transparent solid;
+    };
+    --api-navigation-list-item-selected: {
+      border-left: 4px var(--anypoint-color-primary) solid;
+    };
+    --api-navigation-list-item-hovered: {
+      border-left: 4px var(--anypoint-color-coreBlue1) solid;
+    };
+    --api-navigation-summary-label: {
+      padding: 12px;
+    };
+    --api-navigation-list-item-selected-weight: normal;
+    --api-navigation-list-item-padding: 4px 12px;
+    --api-navigation-operation-item-padding-left: 12px;
+    --api-navigation-list-section-font-size: 14px;
+    --api-navigation-toggle-icon: {
+      display: none !important;
+    };
+    /* Main region panels. This is applied to each top level panels that are in the main region. */
+    --main-region-panel: {
+      margin-bottom: 20px;
+      max-width: 900px;
+      margin-left: 16px;
+    }
+    /* Response view panel */
+    --response-view: {
+      @apply --main-region-panel;
+    };
+    /* Action button is a screen or panel primary action button */
+    --action-button: {
+      background-color: var(--primary-color);
+      color: var(--primary-action-color, #fff);
+    };
+    /* And when it's hovered. */
+    --action-button-hover: {
+      background-color: var(--anypoint-color-coreBlue2);
+      color: white;
+    };
+    /* OAuth 1/2 get token button */
+    --auth-button: {
+      background-color: var(--anypoint-color-danger);
+      color: #fff;
+    };
+    /* OAuth 1/2 get token button when hovered*/
+    --auth-button-hover: {
 
-  --code-mirror: {
-    background-color: #f5f2f0;
-  };
-  --arc-code-mirror-background-color: #f5f2f0;
-  --code-mirror-editor: {
-    background-color: #f5f2f0;
-    z-index: 0;
-    display: block;
-  }
+    };
+    /* Try it forms enable checkbox margin top */
+    --api-url-params-form-enable-checkbox-margin-top: 15px;
+    --api-url-params-form-enable-checkbox-array-margin-top: 40px;
+    --api-headers-form-enable-checkbox-margin-top: 15px;
+    /* Try it forms hint icon margin top */
+    --api-url-params-form-hint-icon-margin-top: 3px;
+    --api-url-params-form-hint-icon-array-margin-top: 35px;
+    --api-headers-editore-hint-icon-margin-top: 3px;
+    /* Try it forms delete icon margin top */
+    --api-headers-form-delete-icon-margin-top: 3px;
+    --api-url-params-editor-editor-subheader: {
+      @apply --arc-font-subhead;
+    };
+    /* Auth method custom icon button margin top */
+    --auth-method-custom-help-icon-margin-top: 3px;
+    --api-form-action-button-color: var(--primary-color);
+    --api-form-action-button-hover-color: var(--anypoint-color-coreBlue2);
+    --api-form-action-icon-color: var(--primary-color);
+    --api-form-action-icon-hover-color: var(--anypoint-color-coreBlue2);
+    --hint-trigger-color: var(--primary-color);
+    --hint-trigger-hover-color: var(--anypoint-color-coreBlue2);
+    --content-action-button-color: var(--primary-color);
+    --content-action-button-color-hover: var(--anypoint-color-coreBlue2);
+    --from-row-action-icon-color: var(--primary-color);
+    --from-row-action-icon-color-hover: var(--anypoint-color-coreBlue2);
 
-  --code-mirror-wrapper: {
-    display: block;
-    height: 100%;
-  };
+    /* HTTP methods colors */
+    --method-display-selected-color: #000;
+    --method-display-get-color: rgba(56, 142, 60, 1);
+    --method-display-post-color: var(--anypoint-color-violet3);
+    --method-display-put-color: var(--anypoint-color-navy3);
+    --method-display-patch-color: rgb(156, 39, 176);
+    --method-display-delete-color: rgb(244, 67, 54);
+
+    /* HTTP methods colors in method documentation panel */
+    --method-label-get-background-color: transparent;
+    --method-label-get-color: var(--method-display-get-color);
+    --method-label-post-background-color: transparent;
+    --method-label-post-color: var(--method-display-post-color);
+    --method-label-put-background-color: transparent;
+    --method-label-put-color: var(--method-display-put-color);
+    --method-label-patch-background-color: transparent;
+    --method-label-patch-color: var(--method-display-patch-color);
+    --method-label-delete-background-color: transparent;
+    --method-label-delete-color: var(--method-display-delete-color);
+
+    /* Code snippets colors */
+    --http-code-snippet-container-highlighted: {
+      background-color: #f5f5f5;
+    };
+    --http-code-snippet-line: {
+      word-break: break-all;
+      white-space: pre-wrap;
+    };
+    --http-code-snippet-container: {
+      background-color: #e0e0e0;
+      padding: 8px;
+    };
+
+
+    /* Type documentation page */
+    --api-type-document-type-background-color: var(--anypoint-color-primary);
+    --api-body-document-media-button-background-color: var(--anypoint-color-futureGreen1);
+    --api-type-document-trait-border-radius: 0px;
+    --api-body-document-media-type-label-font-weight: 700;
+
+    /* Method (operation) styles  */
+    --api-method-documentation-title-method-font-weight: normal;
+    --api-method-documentation-try-it-background-color-hover: var(--anypoint-color-coreBlue2);
+
+    /* Request editor */
+    --api-request-editor-send-valid-button: {
+      background-color: var(--anypoint-color-primary);
+    };
+    --api-request-editor-send-valid-button-hover: {
+      background-color: var(--anypoint-color-coreBlue2);
+    };
+    --api-request-editor-send-invalid-button: {
+      background-color: var(--anypoint-color-danger);
+    };
+    --api-request-editor-send-invalid-button-hover: {
+      background-color: #ef5770;
+    };
+    --primary-button-disabled-background-color: rgb(234, 234, 234);
+
+    /* THEME FOR PAPER ELEMENTS */
 
     /* Paper tabs styling */
-  --paper-tabs-selection-bar-color: var(--primary-color);
-  --paper-tab-ink: var(--primary-color);
-    /* Documentaion */
-  --raml-docs-main-content: {
-    margin-bottom: 20px;
+    --paper-tabs-selection-bar-color: var(--anypoint-color-primary);
+    --paper-tab-ink: var(--primary-color);
+    /* Paper tabs container */
+    --paper-tabs-content: {
+      height: calc(100% - 3px);
+      border-bottom: 3px solid rgba(39, 47, 51, 0.12);
+      @apply --anypoint-font-common-base;
+      font-style: normal;
+      color: var(--anypoint-color-steel3);
+    };
+    /* Bottomm selection bar in tabs */
+    --paper-tabs-selection-bar: {
+      border-width: 3px;
+      /* border-color: var(--primary-color); */
+    };
+    /* Paper tab content text */
+    --paper-tab-content: {
+      font-weight: 400;
+    };
+    /* Mixin for a tab content when not selected */
+    --paper-tab-content-unselected: {
+      color: var(--anypoint-color-steel1);
+    };
+    /* Mixin applied to checkbox's label */
+    --paper-checkbox-label: {
+      @apply --arc-font-body1;
+    };
+    /* Paper button mixn */
+    --paper-button: {
+      @apply --anypoint-font-body;
+      font-size: 14px;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 10px 16px;
+      box-sizing: border-box;
+      text-transform: none;
+      box-shadow: none !important;
+    };
+    /* Removes ink from paper button */
+    --paper-button-ink-color: transparent;
+    --paper-icon-button-ink-color: transparent;
+    /* A special case for paper input when it is contructed with Anypoint paper-input and using regular input with paper-input container */
+    --paper-input-container-input-input-style: {
+      padding: 0 10px;
+      box-sizing: border-box;
+    };
+    /* Paper item element: this is very dirty hack to style paper-dropdown-menu. Part of styling is in the element and the rest is here. */
+    --paper-item: {
+      padding: 0px 10px;
+      border-left: 2px transparent solid;
+      border-right: 2px transparent solid;
+      cursor: pointer;
+      border-left: 2px solid var(--anypoint-color-aluminum4);
+      border-right: 2px solid var(--anypoint-color-aluminum4);
+    };
+    /* There is no such definition in `paper-item` but API components may use it */
+    --paper-item-hover: {
+      padding: 0px 10px;
+      color: var(--anypoint-color-coreBlue3);
+      border-left: 2px var(--anypoint-color-coreBlue3) solid;
+      border-right: 2px var(--anypoint-color-coreBlue3) solid;
+    };
   }
-
-    /* Inputs */
-  --paper-input-container-color: rgba(0, 0, 0, 0.24);
-    /* Inline docs */
-  --inline-docs-color: rgba(0, 0, 0, 0.32);
-  --raml-request-parameters-editor-docs-color: var(--inline-docs-color);
-  --raml-headers-form-docs-color: var(--inline-docs-color);
-
-  --raml-request-parameters-editor-subheader: {
-    @apply(--arc-font-subhead);
-  }
-
-    /* Anypoint styles */
-    /*Tabs (horizontal)*/
-  --anypoint-paper-tabs-content: {
-    height: calc(100% - 3px);
-    border-bottom: 3px solid rgba(39,47,51,.1);
-    @apply(--anypoint-font-common-base);
-    font-style: normal;
-    color: #3a3b3c;
-  };
-
-  --anypoint-paper-tabs-selection-bar: {
-    border-width: 3px;
-    border-color: var(--primary-color);
-  };
-
-  --anypoint-paper-tab-content: {
-    font-weight: 400!important;
-  };
-
-  --anypoint-paper-tab-content-unselected: {
-    color: #6b6c6d;
-  };
-
-  /*Table*/
-  --anypoint-params-table-header-background-color: transparent;
-  --anypoint-params-table-row-border-color: #e0e0e0;
-  --anypoint-params-table-header-color: #000;
-
-  --anypoint-docs-parameters-table-header: {
-    border-bottom: 3px solid #e0e0e0!important;
-  };
-
-  --anypoint-docs-parameters-table-cell: {
-    padding: 10px;
-  };
-
-    /* PATH selector */
-  --raml-docs-tree-item-selected-background: rgb(3, 169, 244);
-  --raml-docs-tree-item-selected-color: #fff;
-
-    /* Request panel */
-  --raml-request-panel: {
-    margin-bottom: 20px;
-    max-width: 900px;
-    margin-left: 16px;
-  }
-  --response-view: {
-    margin-bottom: 20px;
-    max-width: 900px;
-    margin-left: 16px;
-  }
-  --request-form-panels: {
-    margin: 0 0 12px 16px;
-  }
-  --raml-request-url-editor: {
-    @apply(--request-form-panels);
-    overflow: hidden !important;
-  }
-  --raml-request-parameters-editor: {
-    @apply(--request-form-panels);
-  }
-  --raml-body-editor-panel: {
-    @apply(--request-form-panels);
-  }
-  --raml-docs-response-panel: {
-    /*@apply(--request-form-panels);*/
-  }
-  --raml-docs-method-viewer: {
-  }
-  --raml-request-headers-editor: {
-    @apply(--request-form-panels);
-  }
-  --authorization-panel: {
-    @apply(--request-form-panels);
-  }
-  --raml-documentation-panel: {
-    padding: 0;
-    @apply(--request-form-panels);
-  }
-  --raml-summary-view: {
-    @apply(--request-form-panels);
-  }
-  --raml-path-selector: {
-    overflow: auto;
-    height: 100%;
-    background-color: transparent;
-  }
-  --app-drawer-content-container: {
-    background-color: var(--anypoint-color-aluminum2, #eee);
-  }
-  --raml-docs-response-panel-docs-content: {
-    padding: 8px;
-    margin-left: 0px;
-  }
-
-  /* Documentation panels */
-  --params-table-header-background-color: var(--anypoint-params-table-header-background-color);
-  --params-table-subheader-background-color: var(--anypoint-params-table-header-background-color);
-  --params-table-row-border-color: var(--anypoint-params-table-row-border-color);
-  --params-table-row-subproperty-border-color: var(--anypoint-params-table-row-border-color);
-  --params-table-header-color: var(--anypoint-params-table-header-color);
-
-  --docs-parameters-table-header: {
-    @apply(--anypoint-docs-parameters-table-header);
-  };
-
-  --docs-parameters-table-cell: {
-    @apply(--anypoint-docs-parameters-table-cell);
-  };
-
-
-  --inline-documentation-color: #1a237e;
-  --raml-headers-form-docs-color: #1a237e;
-
-  --response-error-view: {
-    margin-top: 24px;
-  }
-
-  --code-type-text-value-color: #0d47a1;
-  --code-type-number-value-color: #03a9f4;
-  --code-type-boolean-value-color: #0288d1;
-  --code-type-null-value-color: #0288d1;
-  --code-punctuation-value-color: #757575;
-  --code-type-link-color: #757575;
-  --code-array-index-color: rgba(1, 87, 155, 0.57);
-  --code-background-color: var(--anypoint-color-aluminum2);
-
-  --method-display-color-selected: #000;
-  --raml-docs-main-content-width: 1200px;
-
-  --paper-checkbox-label: {
-    @apply(--arc-font-body1);
-  };
-
-  --docs-body-parameters-table-type-name: {
-    @apply(--anypoint-font-header5);
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
-  };
-
-  --raml-docs-link: {
-    @apply(--arc-font-body1);
-  };
-
-  /* tabs */
-  --paper-tabs-selection-bar: {
-    @apply(--anypoint-paper-tabs-selection-bar);
-  };
-
-  --paper-tabs-content: {
-    @apply(--anypoint-paper-tabs-content);
-  };
-
-  --paper-tab-content: {
-    @apply(--anypoint-paper-tab-content);
-  };
-
-  --paper-tab-content-unselected: {
-    @apply(--anypoint-paper-tab-content-unselected);
-  };
-
-  /* buttons */
-
-  --paper-button: {
-    @apply(--anypoint-font-body);
-    font-size: 14px;
-    border-radius: 0;
-    box-shadow: none;
-    padding: 10px 16px;
-    box-sizing: border-box;
-    text-transform: none;
-  };
-
-  --btn-danger-nofill: {
-    @apply(--arc-font-body1);
-    border: 1px solid var(--anypoint-color-danger);
-    background-color: transparent;
-    box-shadow: none;
-    color: var(--anypoint-color-danger);
-  }
-
-  --btn-danger-nofill-hover: {
-    background-color: var(--anypoint-color-danger);
-    color: white;
-  }
-
-  --paper-button-ink-color: transparent;
-  --paper-icon-button-ink-color: transparent;
-
-  --toggle-button: {
-    @apply(--arc-font-body1);
-    border: 1px solid var(--anypoint-color-robustBlue2);
-    color: var(--anypoint-color-robustBlue2);
-    transition: none;
-    margin-right: 0;
-    font-weight: normal;
-  }
-
-  --toggle-button-hover: {
-    border: 1px solid var(--anypoint-color-robustBlue1);
-    background: var(--anypoint-color-robustBlue1);
-    color: white;
-  }
-
-  --action-button: {
-    background-color: var(--primary-color);
-    color: var(--primary-action-color, #fff);
-  }
-
-  --action-button-hover: {
-    background-color: var(--anypoint-color-coreBlue2);
-    color: white;
-  }
-
-  --auth-button: {
-    @apply(--btn-danger-nofill);
-  }
-
-  --auth-button-hover: {
-    @apply(--btn-danger-nofill-hover);
-  }
-
-  --raml-docs-resource-viewer-navigation-wide-layout: {
-    background-color: var(--anypoint-color-aluminum2);
-    margin: 0;
-    border-left: 0;
-  }
-
-  --sidebar-list: {
-  }
-
-  --sidebar-list-link: {
-    @apply(--arc-font-body1);
-    padding: 10px 12px;
-  }
-
-  --sidebar-list-link-hover: {
-    color: var(--anypoint-color-coreBlue2);
-  }
-
-}
-
-</style>
+  </style>
+</custom-style>

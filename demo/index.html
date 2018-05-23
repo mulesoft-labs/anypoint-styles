@@ -1,298 +1,276 @@
 <!doctype html>
-<!--
-@license
-Copyright 2017 The Advanced REST client authors <arc@mulesoft.com>
-Licensed under the Apache License, Version 2.0 (the "License"); you may not
-use this file except in compliance with the License. You may obtain a copy of
-the License at
-http://www.apache.org/licenses/LICENSE-2.0
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
-WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
-License for the specific language governing permissions and limitations under
-the License.
--->
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <title>anypoint-styles demo</title>
   <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-  <link rel="import" href="../../../bower_components/iron-flex-layout/iron-flex-layout.html">
-  <link rel="import" href="../../../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
-  <link rel="import" href="../../../bower_components/paper-listbox/paper-listbox.html">
-  <link rel="import" href="../../../bower_components/paper-item/paper-item.html">
+  <link rel="import" href="../../iron-flex-layout/iron-flex-layout.html">
   <link rel="import" href="../colors.html">
   <link rel="import" href="../typography.html">
-  <link rel="import" href="../dropdown-menu.html">
+  <link rel="import" href="../anypoint-theme.html">
 </head>
-<style>
-html {
-  font-size: 62.5%;
-}
+<custom-style>
+  <style is="custom-style">
+  body {
+    font-size: 14px;
+    max-width: 900px;
+    padding-bottom: 120px;
+  }
 
-body {
-  font-size: 14px;
-  max-width: 900px;
-  padding-bottom: 120px;
-}
+  .redlines {
+    background: linear-gradient(0deg, transparent, transparent 3.5px, rgba(255, 0, 0, 0.2) 3.5px, rgba(255, 0, 0, 0.2) 4px);
+    background-size: 100% 4px;
+  }
 
-.redlines {
-  background: linear-gradient(0deg, transparent, transparent 3.5px, rgba(255, 0, 0, 0.2) 3.5px, rgba(255, 0, 0, 0.2) 4px);
-  background-size: 100% 4px;
-}
+  .paragraph {
+    margin: 20px 0;
+  }
 
-.paragraph {
-  margin: 20px 0;
-}
-</style>
-<style is="custom-style" include="anypoint-dropdown-menu-styles"></style>
-<style is="custom-style">
-.anypoint-font-header1 {
-  @apply(--anypoint-font-header1);
-}
+  .anypoint-font-header1 {
+    @apply --anypoint-font-header1;
+  }
 
-.anypoint-font-header2 {
-  @apply(--anypoint-font-header2);
-}
+  .anypoint-font-header2 {
+    @apply --anypoint-font-header2;
+  }
 
-.anypoint-font-header3 {
-  @apply(--anypoint-font-header3);
-}
+  .anypoint-font-header3 {
+    @apply --anypoint-font-header3;
+  }
 
-.anypoint-font-header4 {
-  @apply(--anypoint-font-header4);
-}
+  .anypoint-font-header4 {
+    @apply --anypoint-font-header4;
+  }
 
-.anypoint-font-header5 {
-  @apply(--anypoint-font-header5);
-}
+  .anypoint-font-header5 {
+    @apply --anypoint-font-header5;
+  }
 
-.anypoint-font-header6 {
-  @apply(--anypoint-font-header6);
-}
+  .anypoint-font-header6 {
+    @apply --anypoint-font-header6;
+  }
 
-.anypoint-font-body {
-  @apply(--anypoint-font-body);
-}
+  .anypoint-font-body {
+    @apply --anypoint-font-body;
+  }
 
-.anypoint-font-body-small {
-  @apply(--anypoint-font-body-small);
-}
+  .anypoint-font-body-small {
+    @apply --anypoint-font-body-small;
+  }
 
-.anypoint-font-blockquote {
-  @apply(--anypoint-font-blockquote);
-}
+  .anypoint-font-blockquote {
+    @apply --anypoint-font-blockquote;
+  }
 
-.anypoint-font-code {
-  @apply(--anypoint-font-code);
-}
+  .anypoint-font-code {
+    @apply --anypoint-font-code;
+  }
 
-.toolbar {
-  height: 144px;
-  padding: 16px;
-  background: var(--default-primary-color);
-  color: var(--text-primary-color);
-  @apply(--paper-font-display1);
-}
+  .toolbar {
+    height: 144px;
+    padding: 16px;
+    background: var(--default-primary-color);
+    color: var(--text-primary-color);
+    @apply --paper-font-display1;
+  }
 
-.item,
-.disabled-item {
-  position: relative;
-  padding: 8px;
-  border: 1px solid;
-  border-color: var(--divider-color);
-  border-top: 0;
-}
+  .item,
+  .disabled-item {
+    position: relative;
+    padding: 8px;
+    border: 1px solid;
+    border-color: var(--divider-color);
+    border-top: 0;
+  }
 
-.item .primary {
-  color: var(--primary-text-color);
-  @apply(--paper-font-body2);
-}
+  .item .primary {
+    color: var(--primary-text-color);
+    @apply --paper-font-body2;
+  }
 
-.item .secondary {
-  color: var(--secondary-text-color);
-  @apply(--paper-font-body1);
-}
+  .item .secondary {
+    color: var(--secondary-text-color);
+    @apply --paper-font-body1;
+  }
 
-.disabled-item {
-  color: var(--disabled-text-color);
-  @apply(--paper-font-body2);
-}
+  .disabled-item {
+    color: var(--disabled-text-color);
+    @apply --paper-font-body2;
+  }
 
-.color-primary {
-  background-color: var(--anypoint-color-primary);
-}
+  .color-primary {
+    background-color: var(--anypoint-color-primary);
+  }
 
-.color-secondary {
-  background-color: var(--anypoint-color-secondary);
-}
+  .color-secondary {
+    background-color: var(--anypoint-color-secondary);
+  }
 
-.color-danger {
-  background-color: var(--anypoint-color-danger);
-}
+  .color-danger {
+    background-color: var(--anypoint-color-danger);
+  }
 
-.color-success {
-  background-color: var(--anypoint-color-success);
-}
+  .color-success {
+    background-color: var(--anypoint-color-success);
+  }
 
-.color-tertiary {
-  background-color: var(--anypoint-color-tertiary);
-}
+  .color-tertiary {
+    background-color: var(--anypoint-color-tertiary);
+  }
 
-.color-coreBlue3 {
-  background-color: var(--anypoint-color-coreBlue3);
-}
+  .color-coreBlue3 {
+    background-color: var(--anypoint-color-coreBlue3);
+  }
 
-.color-coreBlue1 {
-  background-color: var(--anypoint-color-coreBlue1);
-}
+  .color-coreBlue1 {
+    background-color: var(--anypoint-color-coreBlue1);
+  }
 
-.color-coreBlue2 {
-  background-color: var(--anypoint-color-coreBlue2);
-}
+  .color-coreBlue2 {
+    background-color: var(--anypoint-color-coreBlue2);
+  }
 
-.color-coreBlue4 {
-  background-color: var(--anypoint-color-coreBlue4);
-}
+  .color-coreBlue4 {
+    background-color: var(--anypoint-color-coreBlue4);
+  }
 
-.color-coreBlue5 {
-  background-color: var(--anypoint-color-coreBlue5);
-}
+  .color-coreBlue5 {
+    background-color: var(--anypoint-color-coreBlue5);
+  }
 
-.color-robustBlue3 {
-  background-color: var(--anypoint-color-robustBlue3);
-}
+  .color-robustBlue3 {
+    background-color: var(--anypoint-color-robustBlue3);
+  }
 
-.color-robustBlue1 {
-  background-color: var(--anypoint-color-robustBlue1);
-}
+  .color-robustBlue1 {
+    background-color: var(--anypoint-color-robustBlue1);
+  }
 
-.color-robustBlue2 {
-  background-color: var(--anypoint-color-robustBlue2);
-}
+  .color-robustBlue2 {
+    background-color: var(--anypoint-color-robustBlue2);
+  }
 
-.color-robustBlue4 {
-  background-color: var(--anypoint-color-robustBlue4);
-}
+  .color-robustBlue4 {
+    background-color: var(--anypoint-color-robustBlue4);
+  }
 
-.color-robustBlue5 {
-  background-color: var(--anypoint-color-robustBlue5);
-}
+  .color-robustBlue5 {
+    background-color: var(--anypoint-color-robustBlue5);
+  }
 
-.color-futureGreen3 {
-  background-color: var(--anypoint-color-futureGreen3);
-}
+  .color-futureGreen3 {
+    background-color: var(--anypoint-color-futureGreen3);
+  }
 
-.color-futureGreen1 {
-  background-color: var(--anypoint-color-futureGreen1);
-}
+  .color-futureGreen1 {
+    background-color: var(--anypoint-color-futureGreen1);
+  }
 
-.color-futureGreen2 {
-  background-color: var(--anypoint-color-futureGreen2);
-}
+  .color-futureGreen2 {
+    background-color: var(--anypoint-color-futureGreen2);
+  }
 
-.color-futureGreen4 {
-  background-color: var(--anypoint-color-futureGreen4);
-}
+  .color-futureGreen4 {
+    background-color: var(--anypoint-color-futureGreen4);
+  }
 
-.color-futureGreen5 {
-  background-color: var(--anypoint-color-futureGreen5);
-}
+  .color-futureGreen5 {
+    background-color: var(--anypoint-color-futureGreen5);
+  }
 
-.color-aluminum1 {
-  background-color: var(--anypoint-color-aluminum1);
-}
+  .color-aluminum1 {
+    background-color: var(--anypoint-color-aluminum1);
+  }
 
-.color-aluminum2 {
-  background-color: var(--anypoint-color-aluminum2);
-}
+  .color-aluminum2 {
+    background-color: var(--anypoint-color-aluminum2);
+  }
 
-.color-aluminum3 {
-  background-color: var(--anypoint-color-aluminum3);
-}
+  .color-aluminum3 {
+    background-color: var(--anypoint-color-aluminum3);
+  }
 
-.color-aluminum4 {
-  background-color: var(--anypoint-color-aluminum4);
-}
+  .color-aluminum4 {
+    background-color: var(--anypoint-color-aluminum4);
+  }
 
-.color-aluminum5 {
-  background-color: var(--anypoint-color-aluminum5);
-}
+  .color-aluminum5 {
+    background-color: var(--anypoint-color-aluminum5);
+  }
 
-.color-steel1 {
-  background-color: var(--anypoint-color-steel1);
-}
+  .color-steel1 {
+    background-color: var(--anypoint-color-steel1);
+  }
 
-.color-steel2 {
-  background-color: var(--anypoint-color-steel2);
-}
+  .color-steel2 {
+    background-color: var(--anypoint-color-steel2);
+  }
 
-.color-steel3 {
-  background-color: var(--anypoint-color-steel3);
-}
+  .color-steel3 {
+    background-color: var(--anypoint-color-steel3);
+  }
 
-.color-steel4 {
-  background-color: var(--anypoint-color-steel4);
-}
+  .color-steel4 {
+    background-color: var(--anypoint-color-steel4);
+  }
 
-.color-steel5 {
-  background-color: var(--anypoint-color-steel5);
-}
+  .color-steel5 {
+    background-color: var(--anypoint-color-steel5);
+  }
 
-.color-yellow3 {
-  background-color: var(--anypoint-color-yellow3);
-}
+  .color-yellow3 {
+    background-color: var(--anypoint-color-yellow3);
+  }
 
-.color-viridian3 {
-  background-color: var(--anypoint-color-viridian3);
-}
+  .color-viridian3 {
+    background-color: var(--anypoint-color-viridian3);
+  }
 
-.color-teal3 {
-  background-color: var(--anypoint-color-teal3);
-}
+  .color-teal3 {
+    background-color: var(--anypoint-color-teal3);
+  }
 
-.color-navy3 {
-  background-color: var(--anypoint-color-navy3);
-}
+  .color-navy3 {
+    background-color: var(--anypoint-color-navy3);
+  }
 
-.color-indigo3 {
-  background-color: var(--anypoint-color-indigo3);
-}
+  .color-indigo3 {
+    background-color: var(--anypoint-color-indigo3);
+  }
 
-.color-violet3 {
-  background-color: var(--anypoint-color-violet3);
-}
+  .color-violet3 {
+    background-color: var(--anypoint-color-violet3);
+  }
 
-.color-red3 {
-  background-color: var(--anypoint-color-red3);
-}
+  .color-red3 {
+    background-color: var(--anypoint-color-red3);
+  }
 
-#colors-output {
-  @apply(--layout-wrap);
-  @apply(--layout-horizontal);
-}
+  #colors-output {
+    @apply --layout-wrap;
+    @apply --layout-horizontal;
+  }
 
-.color-preview-box {
-  margin: 24px;
-}
+  .color-preview-box {
+    margin: 24px;
+  }
 
-.color-preview-box .preview {
-  display: block;
-  height: 32px;
-  width: 92px;
-  border: 1px var(--anypoint-color-aluminum4) solid;
-}
+  .color-preview-box .preview {
+    display: block;
+    height: 32px;
+    width: 92px;
+    border: 1px var(--anypoint-color-aluminum4) solid;
+  }
 
-.color-preview-box .meta > span {
-  display: block;
-  text-align: center;
-  color: var(--anypoint-color-steel5);
-  @apply(--anypoint-font-body);
-}
-</style>
-
+  .color-preview-box .meta > span {
+    display: block;
+    text-align: center;
+    color: var(--anypoint-color-steel5);
+    @apply --anypoint-font-body;
+  }
+  </style>
+</custom-style>
 <body unresolved>
   <h1 class="anypoint-font-header1">anypoint-styles</h1>
   <section id="typography">
@@ -336,19 +314,8 @@ body {
       </div>
     </template>
   </section>
-
-  <section id="dropdown">
-    <h2 class="anypoint-font-header2">dropdown-menu.html</h2>
-    <paper-dropdown-menu class="anypoint-dropdown-menu">
-      <paper-listbox class="dropdown-content" selected="0">
-        <paper-item>Option 1</paper-item>
-        <paper-item>Option 2</paper-item>
-        <paper-item>Option 3</paper-item>
-      </paper-listbox>
-    </paper-dropdown-menu>
-  </section>
   <script>
-  var names = [{
+  let names = [{
     'name': 'primary',
     'color': '#00A2DF'
   }, {
@@ -462,15 +429,15 @@ body {
   }];
 
   function createColors() {
-    var tpl = document.querySelector('#colorTpl');
-    var meta = tpl.content.querySelectorAll('.meta > span');
-    var preview = tpl.content.querySelector('.preview');
-    var container = document.getElementById('colors-output');
-    names.forEach(function(item) {
+    const tpl = document.querySelector('#colorTpl');
+    const meta = tpl.content.querySelectorAll('.meta > span');
+    const preview = tpl.content.querySelector('.preview');
+    const container = document.getElementById('colors-output');
+    names.forEach((item) => {
       meta[0].textContent = item.name;
       meta[1].textContent = item.color;
       preview.className = 'preview color-' + item.name;
-      var clone = document.importNode(tpl.content, true);
+      const clone = document.importNode(tpl.content, true);
       container.appendChild(clone);
     });
   }

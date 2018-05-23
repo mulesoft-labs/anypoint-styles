@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0.0",
+  "elements": [
+    {
+      "description": "The `<anypoint-styles>` component provides simple ways to use Anypoint CSS styles\nin an application. The following imports are available:\n\n1. [colors.html](https://github.com/advanced-rest-client/anypoint-styles/blob/master/colors.html):\na complete list of the colors defined in the Anypoint [palette](http://ux.mulesoft.com/#/colors)\n\n2. [typography.html](https://github.com/advanced-rest-client/anypoint-styles/blob/master/typography.html):\nAnypoint [font](http://ux.mulesoft.com/#/typography) styles and sizes\n\n3. [dropdown-menu.html](https://github.com/advanced-rest-client/anypoint-styles/blob/master/dropdown-menu.html):\nStyles to style `paper-dropdown-menu` as anypoint component.\n\n4. [anypoint-theme.html](https://github.com/advanced-rest-client/anypoint-styles/blob/master/anypoint-theme.html):\nDefault theme for anypoint applications.\n\nWe recommend importing each of these individual files, and using the style mixins\navailable in each ones, rather than the aggregated `anypoint-styles.html` as a whole.",
+      "summary": "",
+      "path": "anypoint-styles.html",
+      "properties": [],
+      "methods": [],
+      "staticMethods": [],
+      "demos": [
+        {
+          "url": "demo/index.html",
+          "description": "demo"
+        },
+        {
+          "url": "demo/index.html",
+          "description": ""
+        }
+      ],
+      "metadata": {},
+      "sourceRange": {
+        "start": {
+          "line": 6,
+          "column": 0
+        },
+        "end": {
+          "line": 28,
+          "column": 3
+        }
+      },
+      "privacy": "public",
+      "superclass": "HTMLElement",
+      "attributes": [],
+      "events": [],
+      "styling": {
+        "cssVariables": [],
+        "selectors": []
+      },
+      "slots": [],
+      "tagname": "anypoint-styles"
+    }
+  ]
+}
