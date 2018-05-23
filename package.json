@@ -1,11 +1,10 @@
 {
-  "name": "@anypoint-components/anypoint-styles",
+  "name": "anypoint-styles",
   "description": "Anypoint styles definition for API components.",
-  "version": "2.0.0-preview",
+  "version": "2.0.0",
   "license": "(C) MuleSoft. All rights reserved.",
   "devDependencies": {
-    "@polymer/gen-typescript-declarations": "^1.1.1",
-    "bower": "^1.8.0"
+    "@polymer/gen-typescript-declarations": "^1.1.1"
   },
   "private": true,
   "main": "anypoint-styles.html",
@@ -18,10 +17,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/advanced-rest-client/anypoint-styles.git"
+    "url": "git://github.com/mulesoft-labs/anypoint-styles.git"
   },
   "bugs": {
-    "url": "https://github.com/advanced-rest-client/anypoint-styles/issues",
+    "url": "https://github.com/mulesoft-labs/anypoint-styles/issues",
     "email": "arc@mulesoft.com"
   }
 }

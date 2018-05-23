@@ -1,7 +1,7 @@
 {
   "name": "anypoint-styles",
   "description": "Anypoint styles definition for API components.",
-  "version": "2.0.0-preview",
+  "version": "2.0.0",
   "license": "(C) MuleSoft. All rights reserved.",
   "author": "Pawel Psztyc",
   "keywords": [
@@ -12,7 +12,7 @@
   "main": "anypoint-styles.html",
   "repository": {
     "type": "git",
-    "url": "git@github.com:advanced-rest-client/anypoint-styles.git"
+    "url": "git@github.com:mulesoft-labs/anypoint-styles.git"
   },
   "dependencies": {
     "polymer": "Polymer/polymer#^2.0.0",
