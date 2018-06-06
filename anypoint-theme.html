@@ -33,15 +33,15 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
     };
 
     --arc-font-display1: {
-      @apply --arc-font-common-base;
+      @apply --anypoint-title-font-common-base;
 
       font-weight: 100;
-      font-size: 34px;
+      font-size: 26px;
       line-height: 40px;
     };
 
     --arc-font-headline: {
-      @apply --arc-font-common-base;
+      @apply --anypoint-title-font-common-base;
 
       font-weight: 100;
       letter-spacing: -.03em;
@@ -50,7 +50,7 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
     };
 
     --arc-font-title: {
-      @apply --arc-font-common-base;
+      @apply --anypoint-title-font-common-base;
       @apply --arc-font-common-nowrap;
 
       font-weight: 100;
@@ -60,7 +60,7 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
     };
 
     --arc-font-subhead: {
-      @apply --arc-font-common-base;
+      @apply --anypoint-title-font-common-base;
 
       font-weight: 400;
       font-size: 16px;
@@ -143,8 +143,11 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
     --code-array-index-color: rgba(1, 87, 155, 0.57);
     --code-background-color: var(--anypoint-color-aluminum2);
     /* API navigation element */
+    --api-navigation: {
+      background-color: #f9fafb;
+    };
     --api-navigation-list-item-color: #616161;
-    --api-navigation-list-item-selected-background-color: transparent;
+    --api-navigation-list-item-selected-background-color: var(--anypoint-color-aluminum3);
     --api-navigation-list-item-selected-color: var(--api-navigation-list-item-color);
     --api-navigation-list-item: {
       border-left: 4px transparent solid;
@@ -160,11 +163,13 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
     };
     --api-navigation-list-item-selected-weight: normal;
     --api-navigation-list-item-padding: 4px 12px;
-    --api-navigation-operation-item-padding-left: 12px;
+    --api-navigation-operation-item-padding-left: 20px;
     --api-navigation-list-section-font-size: 14px;
-    --api-navigation-toggle-icon: {
+    /* --api-navigation-toggle-icon: {
       display: none !important;
-    };
+    }; */
+    /* The :before selector opacity. In material active/focus item has it's own state */
+    --dark-divider-opacity: 0;
     /* Main region panels. This is applied to each top level panels that are in the main region. */
     --main-region-panel: {
       margin-bottom: 20px;
@@ -222,11 +227,13 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
 
     /* HTTP methods colors */
     --method-display-selected-color: #000;
-    --method-display-get-color: rgba(56, 142, 60, 1);
+    --method-display-get-color: var(--anypoint-color-viridian3);
     --method-display-post-color: var(--anypoint-color-violet3);
-    --method-display-put-color: var(--anypoint-color-navy3);
-    --method-display-patch-color: rgb(156, 39, 176);
-    --method-display-delete-color: rgb(244, 67, 54);
+    --method-display-put-color: var(--anypoint-color-yellow3);
+    --method-display-patch-color: var(--anypoint-color-indigo3);
+    --method-display-delete-color: var(--anypoint-color-red3);
+    --method-display-options-color: var(--anypoint-color-teal3);
+    --method-display-head-color: var(--anypoint-color-futureGreen3);
 
     /* HTTP methods colors in method documentation panel */
     --method-label-get-background-color: transparent;
@@ -239,6 +246,12 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
     --method-label-patch-color: var(--method-display-patch-color);
     --method-label-delete-background-color: transparent;
     --method-label-delete-color: var(--method-display-delete-color);
+    --method-label-options-background-color: transparent;
+    --method-label-options-color: var(--method-display-options-color);
+    --method-label-head-background-color: transparent;
+    --method-label-head-color: var(--method-display-head-color);
+
+    --method-display-font-weigth: 100;
 
     /* Code snippets colors */
     --http-code-snippet-container-highlighted: {
@@ -253,16 +266,24 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
       padding: 8px;
     };
 
-
     /* Type documentation page */
-    --api-type-document-type-background-color: var(--anypoint-color-primary);
+    --api-type-document-type-background-color: var(--anypoint-color-robustBlue2);
     --api-body-document-media-button-background-color: var(--anypoint-color-futureGreen1);
     --api-type-document-trait-border-radius: 0px;
-    --api-body-document-media-type-label-font-weight: 700;
+    --api-body-document-media-type-label-font-weight: 400;
+    --api-type-document-union-button-background-color: var(--anypoint-color-primary);
+    --api-type-document-union-button-active-color: #fff;
+    --api-type-document-union-button-active-background-color: var(--anypoint-color-secondary);
+    --api-type-document-union-button-active-color: #fff;
+    --api-type-document-union-button-color: #fff;
+    --property-shape-document-union-color: var(--anypoint-color-yellow3);
+    --property-shape-document-array-color: var(--anypoint-color-viridian3);
+    --property-shape-document-object-color: var(--anypoint-color-violet3);
 
     /* Method (operation) styles  */
-    --api-method-documentation-title-method-font-weight: normal;
+    --api-method-documentation-title-method-font-weight: 100;
     --api-method-documentation-try-it-background-color-hover: var(--anypoint-color-coreBlue2);
+    --api-method-documentation-url-background-color: #000;
 
     /* Request editor */
     --api-request-editor-send-valid-button: {
@@ -299,7 +320,7 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
     };
     /* Paper tab content text */
     --paper-tab-content: {
-      font-weight: 400;
+      font-weight: 400 !important;
     };
     /* Mixin for a tab content when not selected */
     --paper-tab-content-unselected: {
@@ -344,6 +365,11 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
       border-left: 2px var(--anypoint-color-coreBlue3) solid;
       border-right: 2px var(--anypoint-color-coreBlue3) solid;
     };
+
+    /* Endpoint documentation styles */
+    --api-endpoint-documentation-url-background-color: #000;
+    /* API summary page styles */
+    --api-summary-url-background-color: #000;
   }
   </style>
 </custom-style>
