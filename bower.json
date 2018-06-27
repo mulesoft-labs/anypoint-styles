@@ -1,7 +1,7 @@
 {
   "name": "anypoint-styles",
   "description": "Anypoint styles definition for API components.",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "license": "(C) MuleSoft. All rights reserved.",
   "author": "Pawel Psztyc",
   "keywords": [

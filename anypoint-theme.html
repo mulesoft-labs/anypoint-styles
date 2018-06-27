@@ -127,7 +127,7 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
       @apply --arc-font-common-code;
     };
     /* Code Mirror and code related components */
-    --arc-code-mirror-background-color: #f5f2f0;
+    --arc-code-mirror-background-color: var(--anypoint-color-aluminum2);
     --code-mirror-editor: {
       background-color: var(--arc-code-mirror-background-color);
       z-index: 0;
@@ -137,10 +137,10 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
       display: block;
       height: 100%;
     };
-    --code-mirror-string-color: #1341a9;
-    --code-mirror-number-color: #03a9f4;
+    --code-mirror-string-color: #690;
+    --code-mirror-number-color: #690;
     --code-mirror-atom-color: #0288d1;
-    --code-mirror-punctuation-color: #757575;
+    --code-mirror-punctuation-color: #999;
     --code-type-text-value-color: var(--code-mirror-string-color);
     --code-type-number-value-color: var(--code-mirror-number-color);
     --code-type-boolean-value-color: var(--code-mirror-atom-color);
@@ -170,8 +170,9 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
     };
     --api-navigation-list-item-selected-weight: normal;
     --api-navigation-list-item-padding: 4px 12px;
-    --api-navigation-operation-item-padding-left: 20px;
+    --api-navigation-operation-item-padding-left: 10px;
     --api-navigation-list-section-font-size: 14px;
+    --api-navigation-operation-endpoint-opened-background-color: var(--anypoint-color-aluminum2);
     /* --api-navigation-toggle-icon: {
       display: none !important;
     }; */
@@ -214,6 +215,7 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
     --api-url-params-form-hint-icon-margin-top: 3px;
     --api-url-params-form-hint-icon-array-margin-top: 35px;
     --api-headers-editore-hint-icon-margin-top: 3px;
+    --api-headers-editore-hint-icon-margin-top-narrow: 3px;
     /* Try it forms delete icon margin top */
     --api-headers-form-delete-icon-margin-top: 3px;
     --api-url-params-editor-editor-subheader: {
@@ -310,9 +312,9 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
     --api-method-documentation-try-it-background-color-hover: var(--anypoint-color-coreBlue2);
     --api-method-documentation-url-background-color: var(--anypoint-color-steel2);
     --api-method-documentation-docs-sections: {
-      background-color: var(--anypoint-color-aluminum2);
+      background-color: var(--anypoint-color-aluminum1);
       box-sizing: border-box;
-      padding: 15px;
+      padding: 0 15px;
     };
 
     /* Request editor */
