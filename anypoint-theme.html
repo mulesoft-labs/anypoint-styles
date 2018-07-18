@@ -170,12 +170,20 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
     };
     --api-navigation-list-item-selected-weight: normal;
     --api-navigation-list-item-padding: 4px 12px;
-    --api-navigation-operation-item-padding-left: 10px;
+    --api-navigation-operation-item-padding-left: 25px;
     --api-navigation-list-section-font-size: 14px;
     --api-navigation-operation-endpoint-opened-background-color: var(--anypoint-color-aluminum2);
-    /* --api-navigation-toggle-icon: {
-      display: none !important;
-    }; */
+    --api-navigation-endpoint-toggle-icon: {
+      width: 32px;
+      height: 32px;
+      margin-right: 6px;
+    };
+    --api-navigation-toggle-icon: {
+      width: 36px;
+      height: 36px;
+    };
+    --api-navigation-method-label-border-radius: 1px;
+    --api-navigation-endpoint-font-size: 14px;
     /* The :before selector opacity. In material active/focus item has it's own state */
     --dark-divider-opacity: 0;
     /* Main region panels. This is applied to each top level panels that are in the main region. */
@@ -338,6 +346,7 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
     --api-method-documentation-subsection-title-narrow: {
       font-size: 17px;
     };
+    --api-method-documentation-method-label-border-radius: 1px;
 
     /* Request editor */
     --api-request-editor-send-valid-button: {
