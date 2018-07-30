@@ -8,3 +8,5 @@
  *   colors.html
  */
 
+/// <reference path="../polymer/types/lib/elements/custom-style.d.ts" />
+
