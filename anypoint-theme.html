@@ -215,21 +215,21 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
 
     };
     /* Try it forms enable checkbox margin top */
-    --api-url-params-form-enable-checkbox-margin-top: 15px;
+    --api-url-params-form-enable-checkbox-margin-top: 43px;
     --api-url-params-form-enable-checkbox-array-margin-top: 40px;
-    --api-headers-form-enable-checkbox-margin-top: 15px;
+    --api-headers-form-enable-checkbox-margin-top: 43px;
     /* Try it forms hint icon margin top */
-    --api-url-params-form-hint-icon-margin-top: 3px;
+    --api-url-params-form-hint-icon-margin-top: 33px;
     --api-url-params-form-hint-icon-array-margin-top: 35px;
-    --api-headers-editore-hint-icon-margin-top: 3px;
-    --api-headers-editore-hint-icon-margin-top-narrow: 3px;
+    --api-headers-editore-hint-icon-margin-top: 33px;
+    --api-headers-editore-hint-icon-margin-top-narrow: 33px;
     /* Try it forms delete icon margin top */
-    --api-headers-form-delete-icon-margin-top: 3px;
+    --api-headers-form-delete-icon-margin-top: 33px;
     --api-url-params-editor-editor-subheader: {
       @apply --arc-font-subhead;
     };
     /* Auth method custom icon button margin top */
-    --auth-method-custom-help-icon-margin-top: 3px;
+    --auth-method-custom-help-icon-margin-top: 35px;
     --api-form-action-button-color: var(--primary-color);
     --api-form-action-button-hover-color: var(--anypoint-color-coreBlue2);
     --api-form-action-icon-color: var(--primary-color);
@@ -267,7 +267,7 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
     --http-method-label-options-color: #fff;
     --http-method-label-head-background-color: var(--method-display-head-color);
     --http-method-label-head-color: #fff;
-
+    --http-method-label-padding: 4px 5px;
     --method-display-font-weigth: 100;
 
     /* Code snippets colors */
@@ -286,7 +286,7 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
 
     /* Type documentation page */
     --api-type-document-type-background-color: transparent;
-    --api-type-document-type-color: var(--anypoint-color-aluminum5);
+    --api-type-document-type-color: var(--anypoint-color-steel4);
     --api-type-document-trait-data-type-padding: 4px 0;
     --api-type-document-trait-color: var(--anypoint-color-steel2);
     --api-type-document-property-parent-color: #000;
@@ -300,6 +300,9 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
     --property-shape-document-array-color-active: transparent;
     --property-shape-document-object-color: transparent;
     --property-shape-document-object-color-active: transparent;
+    --property-shape-document-title: {
+      font-weight: 600;
+    }
 
     --api-body-document-media-button-background-color: var(--anypoint-color-futureGreen1);
     --api-type-document-trait-border-radius: 0px;
@@ -414,7 +417,6 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
     --paper-input-container-input-input-style: {
       padding: 0 10px;
       box-sizing: border-box;
-      background-color: #fff;
     };
     /* Paper item element: this is very dirty hack to style paper-dropdown-menu. Part of styling is in the element and the rest is here. */
     --paper-item: {
