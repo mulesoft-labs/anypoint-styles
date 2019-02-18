@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git://github.com/mulesoft-labs/anypoint-styles.git"
   },
-  "name": "anypoint-styles",
+  "name": "@advanced-rest-client/anypoint-styles",
   "version": "3.0.0-preview.1",
   "license": "(C) MuleSoft. All rights reserved.",
   "devDependencies": {
