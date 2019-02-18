@@ -5,12 +5,11 @@
  *   https://github.com/Polymer/tools/tree/master/packages/gen-typescript-declarations
  *
  * To modify these typings, edit the source file(s):
- *   typography.html
+ *   typography.js
  */
 
 
 // tslint:disable:variable-name Describing an API that's defined elsewhere.
 
-/// <reference path="../polymer/types/lib/elements/custom-style.d.ts" />
-/// <reference path="din-pro.d.ts" />
 
+export {};

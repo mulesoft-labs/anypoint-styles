@@ -1,19 +1,24 @@
-<!--
+/**
 @license
 Copyright 2018 MuleSoft.
 All rights reserverd.
--->
-<link rel="import" href="../polymer/lib/elements/custom-style.html">
-<link rel="import" href="typography.html">
-<link rel="import" href="colors.html">
-<!--
+*/
+
+/*
 The API Console main stylesheet.
 It is a Polymer's custom style element. It will propagate variables and mixins on all elements;
--->
-<custom-style>
+*/
+
+import '../@polymer/polymer/lib/elements/custom-style.js';
+import './typography.js';
+import './colors.js';
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<custom-style>
   <style is="custom-style">
   :root {
     /* Commonly used properties in Polymer elements */
+
     --primary-color: var(--anypoint-color-primary);
     --secondary-color: var(--anypoint-color-secondary);
     --primary-background-color: var(--anypoint-color-tertiary);
@@ -111,7 +116,7 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
 
     /* THEME FOR API COMPONENTS */
 
-    /* Mixin applied to all the "missing info" paragraphs. By deafult all elements this kind are the <p> elements. But it may vary. */
+    /* Mixin applied to all the "missing info" paragraphs. By deafult all elements this kind are the &lt;p&gt; elements. But it may vary. */
     --no-info-message: {
       @apply --arc-font-body1;
       font-style: italic;
@@ -122,7 +127,7 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
       font-weight: 500;
     };
 
-    /* Mixin applied to all code blocks that highlights schemas / types / etc. All code block uses the `prism-theme-default`. */
+    /* Mixin applied to all code blocks that highlights schemas / types / etc. All code block uses the \`prism-theme-default\`. */
     --code-block: {
       @apply --arc-font-common-code;
     };
@@ -427,7 +432,7 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
       border-left: 2px solid var(--anypoint-color-aluminum4);
       border-right: 2px solid var(--anypoint-color-aluminum4);
     };
-    /* There is no such definition in `paper-item` but API components may use it */
+    /* There is no such definition in \`paper-item\` but API components may use it */
     --paper-item-hover: {
       padding: 0px 10px;
       color: var(--anypoint-color-coreBlue3);
@@ -441,4 +446,6 @@ It is a Polymer's custom style element. It will propagate variables and mixins o
     --api-summary-url-background-color: var(--anypoint-color-steel2);
   }
   </style>
-</custom-style>
+</custom-style>`;
+
+document.head.appendChild($_documentContainer.content);

@@ -1,13 +1,15 @@
-<!--
+/**
 @license
 Copyright 2018 MuleSoft.
 All rights reserverd.
--->
-<link rel="import" href="../polymer/lib/elements/custom-style.html">
-<!--
+*/
+/*
 Registeres a DIN Pro font.
--->
-<custom-style>
+*/
+import '../@polymer/polymer/lib/elements/custom-style.js';
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<custom-style>
   <style is="custom-style">
   :root {
     @font-face {
@@ -67,4 +69,6 @@ Registeres a DIN Pro font.
     }
   }
   </style>
-</custom-style>
+</custom-style>`;
+
+document.head.appendChild($_documentContainer.content);

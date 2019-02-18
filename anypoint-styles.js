@@ -1,10 +1,14 @@
-<!--
+import '../@polymer/iron-flex-layout/iron-flex-layout.js';
+import './colors.js';
+import './typography.js';
+import './anypoint-theme.js';
+
+/**
 @license
 Copyright 2018 MuleSoft.
 All rights reserverd.
--->
-<link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
-<!--
+*/
+/**
 The `<anypoint-styles>` component provides simple ways to use Anypoint CSS styles
 in an application. The following imports are available:
 
@@ -26,7 +30,4 @@ available in each ones, rather than the aggregated `anypoint-styles.html` as a w
 @group Anypoint Elements
 @pseudoElement anypoint-styles
 @demo demo/index.html
--->
-<link rel="import" href="colors.html">
-<link rel="import" href="typography.html">
-<link rel="import" href="anypoint-theme.html">
+*/

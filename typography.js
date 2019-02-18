@@ -1,14 +1,22 @@
-<!--
+/**
 @license
 Copyright 2018 MuleSoft.
 All rights reserverd.
--->
-<link rel="import" href="../polymer/lib/elements/custom-style.html">
-<link rel="import" href="din-pro.html">
-<!--
+*/
+/*
 Anypoint typography.
--->
-<custom-style>
+*/
+/*
+  FIXME(polymer-modulizer): the above comments were extracted
+  from HTML and may be out of place here. Review them and
+  then delete this comment!
+*/
+
+import '../@polymer/polymer/lib/elements/custom-style.js';
+import './din-pro.js';
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<custom-style>
   <style is="custom-style">
   :root {
     --anypoint-font-common-base: {
@@ -116,4 +124,6 @@ Anypoint typography.
     };
   }
   </style>
-</custom-style>
+</custom-style>`;
+
+document.head.appendChild($_documentContainer.content);
