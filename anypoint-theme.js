@@ -9,7 +9,7 @@ The API Console main stylesheet.
 It is a Polymer's custom style element. It will propagate variables and mixins on all elements;
 */
 
-import '../@polymer/polymer/lib/elements/custom-style.js';
+import '@polymer/polymer/lib/elements/custom-style.js';
 import './typography.js';
 import './colors.js';
 const $_documentContainer = document.createElement('template');

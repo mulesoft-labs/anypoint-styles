@@ -9,7 +9,7 @@
     "url": "git://github.com/mulesoft-labs/anypoint-styles.git"
   },
   "name": "@advanced-rest-client/anypoint-styles",
-  "version": "3.0.0-preview.1",
+  "version": "3.0.0-preview.2",
   "license": "(C) MuleSoft. All rights reserved.",
   "devDependencies": {
     "@polymer/gen-typescript-declarations": "^1.6.1",
@@ -29,7 +29,7 @@
     "email": "arc@mulesoft.com"
   },
   "dependencies": {
-    "@polymer/polymer": "^3.0.0",
+    "@polymer/polymer": "^3.1.0",
     "@polymer/iron-flex-layout": "^3.0.0"
   }
 }

@@ -1,4 +1,4 @@
-import '../@polymer/iron-flex-layout/iron-flex-layout.js';
+import '@polymer/iron-flex-layout/iron-flex-layout.js';
 import './colors.js';
 import './typography.js';
 import './anypoint-theme.js';
